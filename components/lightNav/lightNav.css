@@ -1,0 +1,55 @@
+.lightNav__container {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+
+  z-index: 2;
+  position: fixed;
+  right: 8%;
+  bottom: 50%;
+  /* transform: translateY(-50%); */
+  display: flex;
+  flex-direction: column;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+}
+.lightNav__container a {
+  background: transparent;
+  padding: 0.9rem;
+  display: flex;
+  color: var(--color-light);
+  font-size: 1.1rem;
+}
+.dark {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.light {
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.lightNav__container:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.dark.active {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+.light.active {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/*-------------------MEDIA QUERIES (MEDIUM DEVICES)=-----------------------*/
+@media screen and (max-width: 1024px) {
+  .lightNav__container {
+    right: 0%;
+  }
+}
+/*-------------------MEDIA QUERIES (SMALL DEVICES)=-----------------------*/
+@media screen and (max-width: 600px) {
+  .lightNav__container {
+    top: 0;
+    bottom: auto;
+  }
+}
